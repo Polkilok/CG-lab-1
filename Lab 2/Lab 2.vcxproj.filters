@@ -13,14 +13,14 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Кадр">
-      <UniqueIdentifier>{9e01124e-09d1-415d-9c3e-caace6b26162}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Фабрика">
-      <UniqueIdentifier>{ca16f2f7-1a37-4589-bbd1-2657fd3c162d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Исключения">
       <UniqueIdentifier>{fedafb33-a228-4faa-8aec-88d102d28951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Фабрики">
+      <UniqueIdentifier>{ca16f2f7-1a37-4589-bbd1-2657fd3c162d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Кадры">
+      <UniqueIdentifier>{9e01124e-09d1-415d-9c3e-caace6b26162}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -43,13 +43,19 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="frame.h">
-      <Filter>Кадр</Filter>
+      <Filter>Кадры</Filter>
     </ClInclude>
     <ClInclude Include="Exceptions.h">
       <Filter>Исключения</Filter>
     </ClInclude>
     <ClInclude Include="FrameMonochrome.h">
-      <Filter>Кадр</Filter>
+      <Filter>Кадры</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameFactoryBase.h">
+      <Filter>Фабрики</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameFactoryRandom.h">
+      <Filter>Фабрики</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

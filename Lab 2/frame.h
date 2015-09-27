@@ -35,6 +35,13 @@ public:
 	{
 		delete mBytes;
 	}
+	void init_empty_buf()
+	{
+		delete mBytes;//удаляем старый массив
+		int size = bm.bmWidth * bm.bmHeight * bm.bmBitsPixel / 8;
+		mBytes = new BYTE[size];
+		std::fill(mBytes, mBytes + size, 0x0);
+	}
 	//копирует предлеженный массив в буфер (заменяя прошлые значения)
 	void set_buf(const BYTE *mas, const int size)
 	{

@@ -33,9 +33,13 @@
 
 #include <afxcontrolbars.h>     // поддержка MFC для лент и панелей управления
 
+#include <chrono>
+
 #include "Exceptions.h"
 #include "frame.h"
 #include "FrameMonochrome.h"
+#include "FrameFactoryBase.h"
+#include "FrameFactoryRandom.h"
 
 
 #ifdef _UNICODE

@@ -182,24 +182,26 @@ void CLab2Dlg::OnBnClickedpaint()
 		0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
 		0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff
 	};
-	frame *fr = new FrameMonochrome(9, 64);
-	fr->set_buf(White, sizeof White);
-	for (int i = 0; i < 64; i++)
-	{
-		fr->set_pixel(0, i, 0);
-	}	
-	for (int i = 0; i < 64; i++)
-	{
-		fr->set_pixel(8, i, 0);
-	}
-	for (int i = 0; i < 9; i++)
-	{
-		fr->set_pixel(i, 0, 0);
-	}
-	for (int i = 0; i < 9; i++)
-	{
-		fr->set_pixel(i, 63, 0);
-	}
-	fr->show_picture(picture_control);
+	//параметры для работы с битовой картой
+	BITMAP bm;
+	//специально отдельно вынесенный указатель на массив байтов, который потребуется для работы с рисунком
+	BYTE *mBytes;
+	//хендл пикчи, которая будет созданна перед отображением кадра
+	HBITMAP picture;
+	bm.bmWidthBytes = 8;
+	//Этот параметр всегда такой
+	bm.bmType = 0;
+	bm.bmHeight = 9;
+	bm.bmWidth = 64;
+	bm.bmBitsPixel = 1;
+	bm.bmPlanes = 1;
+	bm.bmBits = Black;
+	picture = CreateBitmapIndirect(&bm);
+	picture_control.SetBitmap(picture);
+
+	//FrameFactoryRandom factory(240, 25 * 16);
+	//frame *fr = factory.get_frame();
+	//fr->show_picture(picture_control);
+	//factory.retire_frame(fr);
 	UpdateData(false);
 }

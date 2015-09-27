@@ -101,6 +101,8 @@
   <ItemGroup>
     <ClInclude Include="Exceptions.h" />
     <ClInclude Include="frame.h" />
+    <ClInclude Include="FrameFactoryBase.h" />
+    <ClInclude Include="FrameFactoryRandom.h" />
     <ClInclude Include="FrameMonochrome.h" />
     <ClInclude Include="Lab 2.h" />
     <ClInclude Include="Lab 2Dlg.h" />

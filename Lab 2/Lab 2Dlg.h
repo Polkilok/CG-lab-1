@@ -34,5 +34,8 @@ public:
 	afx_msg void OnBnClickedpaint();
 	// метка для вывода киких-то текстовых сообщений о работе
 	CString lb_msg;
+	//сюда выводятся изображения
 	CStatic picture_control;
+	//а эта фабрика, она обеспечивает нормальную генерацию кадров
+	FrameFactoryBase *ffactory;
 };
